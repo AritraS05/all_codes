@@ -7,22 +7,22 @@ int main(){
     while(t--){
         int n;
         cin>>n;
-        vector<int>a(n);
-        for(int i=0;i<n;i++){
-            cin>>a[i];
+        vector<int>x(n);
+        for(int i = 0;i<n; i++){
+            cin>>x[i];
         }
-        bool flag = true;
-        int l = a[0], r = a[0];
-        for(int i =1;i<n; i++){
-            if(a[i] == l-1){
-                l--;
-            }
-            else if(a[i] == r+1){
-                r++;
+        bool flag = false;
+        sort(x.begin(),x.end());
+        if(n == 2){
+            if(abs(x[0]-x[1]) > 1){
+                flag = true;
             }
             else{
                 flag = false;
             }
+        }
+        else{
+            flag = false;
         }
         if(flag == true){
             cout<<"YES"<<endl;
