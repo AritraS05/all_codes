@@ -18,7 +18,7 @@ int32_t main(){
         vector<int>vis(n);
         int sum = 0;
         for(int i = 0; i<n-1; i++){
-            if(a[i] < 2*a[i+1]){
+            if(a[i] < 2*a[i+1]){    
                 vis[i] = 1;
                 if(i < k){
                     sum++;
